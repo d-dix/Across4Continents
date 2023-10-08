@@ -1,0 +1,326 @@
+/* NAVIGATION BAR */
+#navbar {
+    background-color: grey;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#navbar li { 
+    float: right; 
+}
+#navbar li a { /* Link text formatting */
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+#navbar li a.active {
+    background-color: #047baa;
+  }
+#navbar li a:hover:not(.active) {
+    background-color: #0b0d0e;
+}
+
+body {
+    margin: 0; /* Included so the navbar will be flush with edges */
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 50px; /* Doesn't seem to be working */
+}
+
+/* PAGE CONTENT */
+header {
+    margin: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* CENTERED IMAGE FORMATTING */
+.center-container {
+    width: 80%; /* % parent container */
+    height: 90vh; /* viewport height */
+    margin: 30px auto 40px auto;
+    display: flex; 
+    flex-direction: column; /* children will stack vertically */
+    align-items: center; /* center children horizontally */
+    overflow: hidden;
+}
+.center {
+    width: 100%;
+    height: 100%; /* Will fill the parent's height */
+    object-fit: cover; /* Will maintain the image's aspect ratio */
+}
+
+/* BOX MODEL TEXT, ADAPTED FROM W3SCHOOLES */
+.box-model {
+    box-shadow: 0 0 10px 0.5px;
+    box-sizing: border-box;  /* CSS3 */
+    -moz-box-sizing: border-box;  /* For older Firefox versions */
+    border-radius: 10px;  /* Rounded corners */
+    padding: 30px;
+    margin: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;  /* This will now include the border and padding */
+}  
+
+/* CSS for different box model colors*/
+#index-box{
+    border: 15px solid rgb(76, 68, 60); 
+    border-radius: 20px;  /* Outer rounded corners */
+    background: linear-gradient(to right, rgb(217, 222, 191), rgb(206, 135, 81));
+    outline: 4px solid rgb(76, 68, 60);  /* Add this line for the inner 'border' */
+    outline-offset: -12px; /* Add this line to position the inner 'border' */
+} 
+.char-box {
+    border:10px solid green;
+    background-color:#b8beba;
+    border-radius: 20px;  /* Outer rounded corners */
+    background: linear-gradient(to right, rgb(251, 255, 251), rgb(223, 228, 224));
+    outline: 4px solid green; 
+    outline-offset: -12px; /* Add this line to position the inner 'border' */
+}
+.avi-box {
+    background-color:#f3eaf1;
+    border: 15px solid rgb(206, 170, 202); 
+    border-radius: 30px;  /* Outer rounded corners */
+    outline: 4px solid rgb(206, 170, 202);  /* Add this line for the inner 'border' */
+    outline-offset: -12px; /* Add this line to position the inner 'border' */
+}
+#last-box {
+    position: relative;
+}
+#last-box img {
+    position: absolute;
+    border-radius: 15px;
+    border: 1px solid  rgb(206, 170, 202);
+    bottom: 4vh;
+    right: 8vw;
+    width: 10vw;
+    height: auto;
+}
+
+/* STORY FORMATTING */
+.story {
+    display: flex;
+}
+ .story-text {
+    flex: 1.45;
+    margin: 20px;
+    margin-right: 40px;
+    box-sizing: border-box;  /* CSS3 */
+    -moz-box-sizing: border-box;  /* For older Firefox versions */
+    border-radius: 15px;  /* Rounded corners */
+    padding: 50px;
+    border: 15px solid rgb(76, 68, 60); 
+    box-shadow: 0 0 10px 2px;
+    background: linear-gradient(to right, rgb(217, 222, 191), rgb(206, 135, 81));
+    outline: 4px solid rgb(76, 68, 60);  /* Add this line for the inner 'border' */
+    outline-offset: -12px; /* Add this line to position the inner 'border' */
+}
+.story-img-container {
+    flex: 1; 
+    margin: 20px;
+    margin-left: 40px;
+    overflow: hidden;
+}
+.story-img {
+    width: 100%;
+    height: 100%; /* Will fill the parent's height */
+    object-fit: cover; /* Will maintain the image's aspect ratio */
+    border-radius: 10px;
+}
+.reverse-margins {
+    margin-left: 15px;
+    margin-right: 40px;
+}
+@media (max-width: 1100px) {  /* STORY FORMATTING FOR SMALLER SCREENS */
+    .story {
+        flex-direction: column;
+    }
+    .story-text, .story-img-container {
+        width: 80%; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* PHOTO GALLERY- ADAPTED FROM W3SCHOOLS */
+div.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto; /* center the gallery */
+}
+div.gallery {
+    flex: 1;
+    min-width: calc(33.33% - 20px);
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+div.gallery:hover {
+border: 1px solid #777;
+} 
+div.gallery img {
+width: 100%;
+height: auto;
+}
+div.desc {
+    padding: 5px;
+    text-align: center;
+}
+#fox-vid {
+    border: none;
+    max-height: 75%; /* max height of video, assuming 30px for caption */
+    object-fit: cover; /* maintain aspect ratio */
+    overflow: hidden;
+}
+
+video {
+max-width: 100%;
+height: auto;
+}
+
+/* TABLE */
+.table-title {
+text-align: center;
+margin-top: 150px;
+}
+table {
+margin-top: 20px;
+margin: auto;
+width: 50vw;
+text-align: center;
+border-collapse: collapse;
+}
+.table-img-container {
+width: 250px;  /* set the dimensions */
+height: 250px;
+overflow: hidden;  /* hide anything that exceeds the box */
+}
+.table-img-container img { /* Table Image */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* cover the entire element */
+}
+.title3D {
+    font-size: 24px;
+    color: #333;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #fff, 4px 4px #999; /* first shadow white, second grey */
+    letter-spacing: 2px;
+    transform: skewX(-10deg); /* tilts text */
+  }
+.table-vid {
+    height: 100%;
+    object-fit: cover;
+}
+td, th {
+    border: 0.25px solid lightgray;
+    padding: 15px;
+  }
+th {
+    background-color: #496550;
+    font-size: 24px;
+}
+/* Media Query for table */
+@media only screen and (max-width: 600px) {
+    table {
+      width: 100%;  /* Take up full width on small screens */
+      overflow-x: auto; /* Add horizontal scroll if needed */
+    }
+    .table-title {
+        margin-top: 50px;
+    }
+    th {
+        font-size: 20px;
+    }
+    .table-img-container {
+      width: 100px;  /* Smaller size for small screens */
+      height: 100px;
+    }
+    .table-img-container img {
+        width: 100px;  /* set the dimensions */
+        height: 100px;
+        overflow: hidden;  /* hide anything that exceeds the box */
+    }
+    td, th {
+      padding: 5px;  /* Less padding on small screens */
+    }
+    .title3D {
+      font-size: 16px;  /* Smaller font size on small screens */
+    }
+  }
+
+/* LIST */
+.list {
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.list ul li {
+    display: inline-block;  /* Elements will line up in a row */
+    text-align: left; 
+    margin: 5px;  /* Add some space between list items */
+    border: 1px solid #ddd;  /* Add a border to each li for separation */
+    padding: 10px;  /* Add some padding within each li */
+}
+
+/* TEXT FORMATTING */
+.all-caps {
+    text-transform: uppercase;
+  }
+.emphasize {
+color: #333;
+font-size: 1.2rem; /* 120% of the root font size */
+padding: 2px;
+text-transform: uppercase;
+text-shadow: 2px 2px #fff, 4px 4px #999; /* first shadow white, second grey */
+letter-spacing: 2px;
+transform: skewX(-10deg); /* tilts text */
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+a:hover {
+    color: #0056b3;
+    text-shadow: 1px 1px 2px gray;
+}  
+.handwriting {
+    font-family: 'Patrick Hand', cursive;  /* you can choose another from the linked fonts */
+    font-size: 1.5em;  /* or specify in px, em, etc. */
+}
+
+/* OTHER ELEMENTS */
+.earth {
+    display: inline-block; /* Inline elements can't be transformed */
+    animation: spin 10s linear infinite;
+    font-size: 30px;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
